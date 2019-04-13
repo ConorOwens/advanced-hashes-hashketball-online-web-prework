@@ -178,4 +178,7 @@ def player_stats(name)
 end
 
 def big_shoe_rebounds
-  i = nil
+  size = nil 
+  big = nil 
+  game_hash.each do |side, data|
+    
