@@ -181,4 +181,22 @@ def big_shoe_rebounds
   size = nil 
   big = nil 
   game_hash.each do |side, data|
+    data[:players].each do |player, info|
+      if size == nil
+        size = shoe_size(player)
+        big = player
+      elsif size < shoe_size(player)
+        size = shoe_size(player)
+        big = player
+      end
+    end
+  end
+  game_hash.each do |side, data|
+    data[:players].each do |player, data|
+      if player == name
+        return data[:rebounds]
+      end
+    end
+  end
+end
     
