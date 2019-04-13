@@ -166,17 +166,15 @@ def player_numbers(team)
 end
 
 def player_stats(name)
-  hash = {}
   game_hash.each do |side, data|
     game_hash.each do |side, data|
       data[:players].each do |player, info|
         if player == name
-          hash < info
+          info
         end
       end
     end
   end
-  hash
 end
 
 def big_shoe_rebounds
