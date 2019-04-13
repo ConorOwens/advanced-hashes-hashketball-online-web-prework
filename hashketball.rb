@@ -193,7 +193,7 @@ def big_shoe_rebounds
   end
   game_hash.each do |side, data|
     data[:players].each do |player, data|
-      if player == name
+      if player == big
         return data[:rebounds]
       end
     end
